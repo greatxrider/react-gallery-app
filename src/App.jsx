@@ -7,13 +7,14 @@ import PhotoList from './components/PhotoList/PhotoList';
 import Loading from './components/Loading/Loading';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
-import apiKey from './config/config';
 
 const App = () => {
   // State variables
   const [images, setImages] = useState([]);
   const [query, setQuery] = useState("Dogs");
   const [loading, setLoading] = useState(true);
+  // apiKey for FLICKR stored in env
+  const apiKey = import.meta.env.VITE_FLICKR_API_KEY;
 
   /**
  * Fetches data from the Flickr API based on the search query.
