@@ -27,6 +27,7 @@ const App = () => {
     let activeFetch = true;
     axios.get(url)
       .then(res => {
+        console.log(res);
         if (activeFetch) {
           setImages(res.data.photos.photo);
           setLoading(false);
